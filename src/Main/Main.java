@@ -22,10 +22,13 @@ public class Main {
 
     }
 
+    /**
+     * returns the array of insufficient grades
+     * @param grades:int[]
+     * @return int[]
+     */
     public static int[] aufgabe_1(int [] grades)
-    {//returns the array of insufficient grades
-        //Input: int[]
-        //Output: int[]
+    {
         int[] returnGrades={};
         for (int note: grades) {
             if(note<38) {
@@ -35,10 +38,14 @@ public class Main {
         }
         return returnGrades;
     }
+
+    /**
+     * rounds the value if it's greater(or equal) than 38
+     * @param x:int
+     * @return int
+     */
     public static int round(int x)
-    {//rounds the value if it's greater(or equal) than 38
-        //Input: int
-        //Output: int
+    {
         if(x<38)
             return x;
         if(x%5>=3)
@@ -46,10 +53,13 @@ public class Main {
         return x-x%5;
     }
 
+    /**
+     * returns the average of the grades
+     * @param grades:int[]
+     * @return double
+     */
     public static double aufgabe_2(int [] grades)
-    {//returns the average of the grades
-        //Input: int
-        //Output: double
+    {
         double sum=0;
         for (int note: grades) {
             sum+=note;
@@ -58,10 +68,13 @@ public class Main {
 
     }
 
+    /**
+     * returns an array with rounded grades
+     * @param grades:int[]
+     * @return int[]
+     */
     public static int[] aufgabe_3(int [] grades)
-    {//returns an array with rounded grades
-        //Input: int[]
-        //Output: int[]
+    {
         int[] returnGrades=new int[grades.length];
         for (int i=0;i<grades.length;i++) {
             returnGrades[i]=round(grades[i]);
@@ -70,10 +83,13 @@ public class Main {
         return returnGrades;
     }
 
+    /**
+     * returns the maximum value of grades
+     * @param grades:int[]
+     * @return double
+     */
     public static double aufgabe_4(int [] grades)
-    {//returns the maximum value of grades
-        //Input: int[]
-        //Output: double
+    {
         double max_val=grades[0];
         for (int note: grades) {
             if(note>max_val)
