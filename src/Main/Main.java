@@ -74,7 +74,7 @@ public class Main {
     {//returns the maximum value of grades
         //Input: int[]
         //Output: double
-        double max_val=0;
+        double max_val=grades[0];
         for (int note: grades) {
             if(note>max_val)
                 max_val=note;
